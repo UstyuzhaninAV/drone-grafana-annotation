@@ -9,6 +9,7 @@ COPY script.sh /bin/
 
 RUN set -ex &&\
     chmod +x /bin/script.sh && \
+    apt-get update && \
     apt-get install curl ca-certificates -y
 
 ENTRYPOINT ["/bin/script.sh"]
